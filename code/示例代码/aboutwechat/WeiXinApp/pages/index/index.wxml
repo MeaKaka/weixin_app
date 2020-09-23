@@ -1,0 +1,69 @@
+<!--index.wxml-->
+
+<view class="container">
+<!--页面顶部，标题、定位、搜索框  -->
+  <view class="head">
+    <view class='location'>
+      <text>{{location}}</text>
+    </view>
+    <view class='searchbar'>
+        <view class="weui-search-bar__form" style='width:90%;'>
+          <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+              <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                  <icon type="clear" size="14"></icon>
+              </view>
+          </view>
+          <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+              <icon class="weui-icon-search" type="search" size="14"></icon>
+              <view class="weui-search-bar__text">搜索</view>
+          </label>
+        </view>
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+      </view>
+  </view>
+  <!--分类导航栏  -->
+  <view class='classifybar'>
+    <view class="weui-grids">
+      <block>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="../../assets/icons/sharebill_active.png" />
+            <view class="weui-grid__label">各种外卖</view>
+        </navigator>
+      </block>
+      <block>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="../../assets/icons/sharebill_active.png" />
+            <view class="weui-grid__label">天猫超市</view>
+        </navigator>
+      </block>
+      <block>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="../../assets/icons/sharebill_active.png" />
+            <view class="weui-grid__label">奶茶专属</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <!--主体部分，各店铺  -->
+  <view class='content'>
+    <!--设置循环，针对每一个个体商家显示，利用id将他们区分  -->
+    <!--用wx：key来指定列表中项目的唯一标识符，字符串或者保留字  -->
+    <scroll-view wx:for="{{shoplist}}" wx:key="{{index}}" scroll-y="true">
+      <navigator class="shopcard" url='shopdetail/shopdetail?url={{item.url}}'>
+          <image src='{{item.image}}' class="shop_img"></image>
+          <view class="shop_word">
+            <!--这里可以具体再细分到底要显示什么，商家名，拼单概况之类的  -->
+            <view class='shop_word_name'>
+              <text class='textWordName'>{{item.name}}</text>
+            </view>
+            <view class='shop_word_survey'>
+              <text class='textSummary'>{{item.summary}}</text>
+            </view>       
+          </view>
+      </navigator>
+      <view class="line"></view>
+    </scroll-view>
+  </view>
+</view>

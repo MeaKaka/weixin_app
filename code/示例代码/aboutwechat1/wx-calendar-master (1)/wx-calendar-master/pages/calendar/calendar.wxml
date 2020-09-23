@@ -1,0 +1,38 @@
+<!--pages/calendar/calendar.wxml-->
+
+
+<view class="calendar">
+  <view class="calendar-header">
+  <!--bindtap就是点击按钮对应的触发函数  -->
+    <image src="/images/date-left.png" bindtap="bindLastMonth"/>
+    <!--picker组件的功能就是点击后下拉组件的选择 -->
+    <picker value="{{date}}"
+          bindchange="bindPickerChange"
+          fields="month"
+          mode="date"
+          start="1990-01-01"
+          end="2020-12-31">
+          <!--相当于给参数赋值的过程  -->
+      <view class="picker">{{dateCN}}</view>
+    </picker>
+    <image src="/images/date-right.png" bindtap="bindNextMonth"/>
+  </view>
+
+
+  <view class="week">
+    <view wx:for="{{week}}" wx:key="{{item}}" class="week-item">
+      <text>{{item}}</text>
+    </view>
+  </view>
+
+
+  <view class="month">
+    <view wx:for="{{months}}" wx:key="{{item}}" class="month-item" data-item="{{item}}" bindtap="click">
+        <text>{{item.num}}</text>
+    </view>
+  </view>
+  <!-- <button bindtap="bindsubmit"> 确定提交 </button> -->
+  <button> 确定提交 </button>
+</view>
+
+

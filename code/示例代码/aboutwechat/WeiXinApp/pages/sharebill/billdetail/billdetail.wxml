@@ -1,0 +1,82 @@
+<!--pages/sharebill/billdetail/billdetail.wxml-->
+
+<view class='page'>
+  <view class='title'>
+    <p class="title-p">订单详情</p>
+  </view>
+  <!--关于当前拼单的基本情况  -->
+  <view class='cells_title'>拼单信息</view>
+  <view class="weui-cells weui-cells_form">
+    <!--商家的基本信息  -->
+    <view class='weui_cells'>
+      <view class="weui-cell">    
+          <view class="weui-cell__hd"><label class="weui-label">商家名称 : </label></view>
+          <view class="weui-cell__bd">
+              <text class='baseinfo'>{{BillInfo.shopName}}</text>
+          </view>
+      </view>
+      <view class="weui-cell">    
+        <view class="weui-cell__hd"><label class="weui-label">平台名称 : </label></view>
+          <view class="weui-cell__bd">
+              <text class='baseinfo'>{{BillInfo.plantName}}</text>
+        </view>
+      </view>
+      <view class="weui-cell">    
+          <view class="weui-cell__hd"><label class="weui-label">配送地址 : </label></view>
+          <view class="weui-cell__bd">
+              <text class='baseinfo'>{{BillInfo.location}}</text>
+          </view>
+      </view>
+      <view class="weui-cell">    
+          <view class="weui-cell__hd"><label class="weui-label">运费信息 : </label></view>
+          <view class="weui-cell__bd">
+              <text class='baseinfo'>{{BillInfo.extraMoney}}</text>
+          </view>
+      </view>
+      <view class="weui-cell">    
+        <view class="weui-cell__hd"><label class="weui-label">目标优惠 : </label></view>
+          <view class="weui-cell__bd">
+              <text class='baseinfo'>满{{BillInfo.target}}减{{BillInfo.discount}}</text>
+        </view>
+      </view>
+      <view class="weui-cell">    
+        <view class="weui-cell__hd"><label class="weui-label">订单状态 : </label></view>
+          <view class="weui-cell__bd">
+              <text class='baseinfo'>{{BillInfo.state}}</text>
+        </view>
+      </view>
+    </view>
+    <!--加一条灰色的线  -->
+    <view class='line'></view>
+    <view class='cells_title'>拼单用户信息</view>
+    <view class='linedown'></view>
+    <!--与此订单有关的所有用户的信息  -->
+    <view class='weui_cells'>
+      <scroll-view wx:for="{{BillInfo.userList}}" wx:key="{{index}}" scroll-y="true">
+        <view class="weui_cell">    
+          <view class="cell-hd">用户电话:{{item.user.telephone}}</view>
+        </view>
+        <view class="weui_cell">    
+          <view class="cell-bd">商品名称:{{item.want}}</view>
+        </view>
+        <view class="weui_cell">    
+          <view class="cell-bd">订单金额:{{item.pay}}</view>
+        </view>
+                  
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 两个按钮用来表示状态 -->
+  <view class='buttonLocation'>
+  <!--首先判断是不是订单发起人，然后判断订单状态(发起人：拼单完成/配送完成；参与者：配送完成)  -->
+    <button bindtap='forsubmit' class="{{isEnd?'button_hide':'buttonColor'}}">{{isOwner?
+                                                                                  (isFinished?
+                                                                                    '配送完成'
+                                                                                    :'拼单完成')
+                                                                                  :'配送完成'}}</button>
+  </view>
+</view>
+
+
+
+

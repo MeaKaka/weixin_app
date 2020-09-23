@@ -1,0 +1,58 @@
+/* pages/mine/mine.wxss */
+.useinfo{
+    display: flex;
+    height: 320rpx;
+    /* border-bottom-style: solid;
+    border-bottom-width: 0.25rpx;
+    border-bottom-color: silver; */
+}
+
+.face{
+  width: 35%;
+  height: 95%;
+  margin-left: 8%;
+}
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.info{
+  margin-top: 30rpx;
+}
+
+.userinfo-nickname {
+  color: black;
+  margin-top: 60rpx;
+}
+.button_hide{
+    color: white;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+.loginbutton{
+  border-radius: 100%;
+  width: 200rpx;
+  height: 200rpx;
+  border: none;
+}
+
+button[class='loginbutton']::after{
+  border: 0;
+}
+
+.button_text{
+  text-align: center;
+  line-height: 200rpx;
+}
+.line{
+  width: 100%;
+  background: silver
+}

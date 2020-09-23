@@ -1,0 +1,52 @@
+
+.title{
+  height: 180rpx;
+  text-align: center;
+}
+.title-p{
+  color: #0bb20c;
+  height: 50%;
+  font-size: 20px;
+}
+
+.picker{
+    padding: 1px;
+    background-color: #FFFFFF;
+}
+.textmin{
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.targetoff{
+  display: flex;
+  flex-direction: row;
+}
+
+.number_input_front{
+  margin-top: 12%; 
+  width: 15%;
+}
+
+.number_input{
+  margin-left: 10%;
+  flex-grow: 1;
+}
+
+.weui-cell-hd{
+  width: 30%;
+}
+.weui-cell-bd{
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+}
+.weui-cell-ft{
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonStyle{
+  margin: 20rpx;
+}

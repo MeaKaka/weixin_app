@@ -1,0 +1,18 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/add/index",
+		"pages/week/index",
+		"pages/month/index"
+	],
+	"window": {
+		"backgroundTextStyle":"light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "Next",
+		"navigationBarTextStyle":"black",
+		"backgroundColor": "#F2f2f2",
+		"enablePullDownRefresh":"false"
+	},
+	"debug": true
+}
+

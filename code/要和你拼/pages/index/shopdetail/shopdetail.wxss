@@ -1,0 +1,53 @@
+/* pages/index/shopdetail/shopdetail.wxss */
+
+/* 标题部分用来存放商家的名字和图片 */
+.title{
+  display: flex;
+  height: 256rpx;
+  /* background-color: black; */
+  width: 100%;
+}
+/*title里存放图像  */
+.img{
+  /* height: 85%;
+  width: 30%; */
+  /* background-color: pink; */
+  width: 200rpx;
+  height: 200rpx;
+  margin: 25rpx;
+  border-radius: 70%;
+}
+/*title里存放商店名称  */
+.word{
+    flex-grow: 1;
+    /* background-color: yellow; */
+}
+.name{
+  /* background-color: blue; */
+  width: 100%;
+  font-size: 45rpx;
+}
+.survey{
+  width: 100%;
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+  margin-right: 5rpx;
+  color: gray;
+  /* background-color: orange; */
+}
+
+
+/* 主体页面：拼单信息 */
+.content{
+  /* background-color: green; */
+  margin: 10rpx;
+}
+/*平台名称  */
+.platname{
+  font-size: 20px;
+}
+.info{
+  /* border-style: solid;  */
+  /* border-width: thick;
+  border-color: silver; */
+}

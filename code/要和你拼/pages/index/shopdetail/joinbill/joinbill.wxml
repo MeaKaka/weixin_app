@@ -1,0 +1,80 @@
+<!--设置一个表单用于提交数据  -->
+<view class='page'>
+  <view class='title'>
+    <p class="title-p">加入拼单</p>
+  </view>
+  <!--关于已有拼单的基本情况  -->
+  <view class='info-title'>拼单发起人信息</view>
+  <view class="weui-cells weui-cells_form">
+    <!--拼单发起人地址  -->
+    <view class="weui-cell">    
+        <view class="weui-cell__hd"><label class="weui-label">拼单发起人地址 :  </label></view>
+        <view class="weui-cell__bd">
+            <text class='baseinfo'>{{baseinfo.location}}</text>
+        </view>
+    </view>
+    <!--拼单发起人目标优惠  -->
+    <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">目标优惠 ： </label></view>
+        <view class="weui-cell__bd">
+            <text class='baseinfo'>满{{baseinfo.target}}减{{baseinfo.discount}}</text>
+        </view>
+    </view>
+    <!--订单运费情况  -->
+    <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">运费情况 ： </label></view>
+        <view class="weui-cell__bd">
+            <text class='baseinfo'>{{baseinfo.extraMoney}}</text>
+        </view>
+    </view>
+    <!--订单已有金额  -->
+    <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">订单已有金额 ： </label></view>
+        <view class="weui-cell__bd">
+            <text class='baseinfo'>{{baseinfo.hasMoney}}</text>
+        </view>
+    </view>
+    <!--拼单发起人留言  -->
+    <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">发起人留言 ： </label></view>
+        <view class="weui-cell__bd">
+            <text class='baseinfo'>{{baseinfo.word}}</text>
+        </view>
+    </view>
+
+  </view>
+
+  <!-- 表单能够贡献的金额 -->
+  <form bindsubmit='formSubmit'>
+    <view class='user-in'>拼单所需信息</view>
+    <view class="weui-cells weui-cells_form">
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">商品名称 ： </label></view>
+        <view class="weui-cell__bd">
+            <input class="weui-input" type="text" name="want" placeholder="购买的商品填这儿~"/>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">购买金额 ： </label></view>
+        <view class="weui-cell__bd">
+            <input class="weui-input" type="digit" name="purchase" placeholder="购买金额不要超过999哦~"/>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">联系方式 ： </label></view>
+        <view class="weui-cell__bd">
+            <input class="weui-input" type="digit" name="tel" placeholder="手机号码要11位哦~"/>
+        </view>
+      </view>
+    </view>
+    <view>
+      <button form-type='submit' class="buttonstyle weui-form-preview__btn">确定提交</button>
+    </view>
+  </form>
+
+
+</view>
+
+
+
+

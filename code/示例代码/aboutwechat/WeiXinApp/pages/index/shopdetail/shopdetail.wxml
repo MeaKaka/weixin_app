@@ -1,0 +1,35 @@
+<!--shopdetail.wxml-->
+<view class='page'>
+  <!--设置页面标题，包含商铺名称和图片等  -->
+  <view class='title'>
+    <image background-size="cover" src='{{shopdetailImage}}' class='img'></image>
+    <view class='word'>
+      <view class='name'><text>{{shopdetailName}}</text></view>
+      <view class='survey'><text>{{shopdetailSumary}}</text></view>
+    </view>
+  </view>
+  <!--拼单的信息  -->
+  <view class='content'>
+    <view wx:for="{{shopdetailList}}" wx:key="{{index1}}">
+      <!-- 平台的名称 -->
+      <view class='platname'>{{item.platform}}</view>
+      <!--具体的拼单信息，允许选中一个加入拼单  -->
+      <view class="info" wx:for="{{item.shopBillInfoList}}" wx:key="{{index2}}">
+        <!-- todo 拼单发起人地址、目标优惠、所需金额  -->
+        <view class="weui-cells"> 
+          <view class="weui-cell weui-cell__hd">发起人地址 : {{item.location}}</view>
+          <view class="weui-cell weui-cell__hd">目标优惠 : 满{{item.target}}减{{item.discount}}</view>
+          <view class="weui-cell weui-cell__hd">已有金额 : {{item.hasMoney}}</view>
+          <!--todo 页面的跳转  -->
+          <navigator url='joinbill/joinbill?url={{item.url}}'>
+            <view class="weui-cell weui-cell__ft"><button size='mini' class='weui-btn weui-form-preview__btn'>加入</button></view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+</view>

@@ -1,0 +1,43 @@
+/* pages/export_img/export_img.wxss */
+
+page {
+  background: #eee;
+}
+
+.img-wrap {
+  box-sizing:border-box;
+  border:2px solid #000;
+  border-radius:15px;
+  overflow:hidden;
+}
+
+.img-wrap image{
+  width: 100%;
+  height: 100%;
+  border-radius:15px;
+  box-sizing:border-box;
+}
+
+.btn-wrap .btn {
+  padding: 0;
+  width:388rpx;
+  height:84rpx;
+  background-color:rgba(0,0,0,0);
+}
+
+.btn-wrap .btn::after {
+  border: none;
+}
+
+.btn-wrap .save-icon {
+  background-position:-400rpx -576rpx;
+  margin-bottom:30rpx;
+}
+
+.btn-wrap .share-icon {
+  background-position:-6rpx -576rpx;
+}
+
+.btn-wrap .create-icon {
+  background-position:-64rpx -490rpx;
+}

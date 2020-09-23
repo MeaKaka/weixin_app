@@ -1,0 +1,14 @@
+/**welcome.wxss**/
+
+.container {
+    padding: 100rpx 0;
+    justify-content: space-between;
+}
+
+.cover-wrap, .btn-wrap {
+    width: 65%;
+}
+
+.cover-wrap image,.btn-wrap image {
+    width: 100%;
+}

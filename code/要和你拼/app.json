@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/shopdetail/shopdetail",
+    "pages/index/shopdetail/joinbill/joinbill",
+    "pages/sharebill/sharebill",
+    "pages/sharebill/billdetail/billdetail",
+    "pages/sharebill/addbill/addbill",
+    "pages/mine/mine"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "要和你拼",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#444444",
+    "backgroungColor": "#ffffff",
+    "borderStyle": "#e0e0e0",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "商家",
+      "iconPath": "assets/icons/shop.png",
+      "selectedIconPath": "assets/icons/shop_active.png"
+    },
+    {
+      "pagePath": "pages/sharebill/sharebill",
+      "text": "拼单",
+      "iconPath": "assets/icons/sharebill.png",
+      "selectedIconPath": "assets/icons/sharebill_active.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "assets/icons/mine.png",
+      "selectedIconPath": "assets/icons/mine_active.png"
+    }
+    ]
+  }
+}

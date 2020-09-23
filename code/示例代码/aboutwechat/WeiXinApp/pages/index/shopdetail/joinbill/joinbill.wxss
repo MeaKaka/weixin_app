@@ -1,0 +1,28 @@
+/* pages/index/shopdetail/joinbill/joinbill.wxss */
+
+
+.title{
+  height: 180rpx;
+  text-align: center;
+}
+.title-p{
+  color: #0bb20c;
+  height: 50%;
+  font-size: 20px;
+}
+
+.picker{
+    padding: 1px;
+    background-color: #FFFFFF;
+}
+.info-title{
+  font-size: 20px;
+}
+.user-in{
+  margin-top: 25rpx;
+  font-size: 20px;
+}
+.buttonstyle{
+  margin: 30rpx;
+}
+

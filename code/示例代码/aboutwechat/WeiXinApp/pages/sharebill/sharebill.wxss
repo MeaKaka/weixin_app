@@ -1,0 +1,140 @@
+/* pages/sharebill/sharebill.wxss */
+
+.newShareBill{
+  margin-top: 20rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  height: 256rpx;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.AtPresentShareBill{
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  margin-top: 40rpx;
+  width: 100%;
+}
+
+.HistoryShareBill{
+  /* background-color: green; */
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  margin-top: 40rpx;
+  /*高度为从后台返回的历史订单个数决定  */
+  width: 100%;
+}
+.addborder{
+  height: 70%;
+  width: 30%;
+  /* text-align: center; */
+  /* border-style: solid;
+  border-width: 0.2px;
+  border-color: silver; */
+  margin-left: 2%;
+  margin-bottom: 20rpx
+}
+.addimg{
+  height: 100%;
+  width: 100%;
+}
+
+.BillListText{
+    font-size: 20px;
+    margin-top: 20rpx;
+    color: green;
+}
+
+.HistoryBillcard{
+  display: flex;
+  background-color: blue;
+  height: 256rpx;
+  border-bottom-style: solid;
+  border-bottom-width: 0.2px;
+  border-bottom-color: silver;
+
+}
+.PresentBillCard{
+  display: flex;
+  background-color: blue;
+  height: 256rpx;
+  border-bottom-style: solid;
+  border-bottom-width: 0.2px;
+  border-bottom-color: silver;
+}
+.card_left{
+  height: 100%;
+  width: 25%;
+}
+.bill_img{
+  background-color: tan;
+  height: 70%;
+  width: 100%;
+}
+
+.bill_content_name{
+  background-color: sienna;
+  height:20%;
+  margin-bottom: 2%;
+}
+
+.card_right{
+  flex-grow: 1;
+}
+
+.bill_content_survey{
+  color: grey;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.weui_cell{
+  display: flex;
+  flex-direction: row;
+  border-bottom-style: solid;
+  border-bottom-width: 5rpx;
+  border-bottom-color: silver;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  height: 70rpx;
+}
+
+.weui_cell-hd{
+  width: 42%;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.weui_cell-bd{
+  width: 25%;
+  font-size: 30rpx;
+}
+.weui_cell-ft{
+  width: 20%;
+  color: green;
+  font-size: 30rpx;
+  margin-left: 5rpx;
+}
+.buttonstyle{
+  height: 70rpx;
+  width: 180rpx;
+  color: green;
+}
+
+.weui_cell-hd-title{
+  width: 45%;
+  margin-left: 20rpx;
+  font-size: 35rpx;
+}
+.weui_cell-bd-title{
+  width: 25%;
+  font-size: 35rpx;
+}
+.weui_cell-ft-title{
+  width: 20%;
+  /* color: green; */
+  font-size: 35rpx;
+}

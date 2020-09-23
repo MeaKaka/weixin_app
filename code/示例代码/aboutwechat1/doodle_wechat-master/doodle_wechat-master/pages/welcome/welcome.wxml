@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class='container grid-bg'>
+    <view class='cover-wrap'>
+      <image src='./../../img/cover_1.png' mode='widthFix'></image>
+    </view>
+    <view bindtap='bindViewTap' class='btn-wrap'>
+      <image src='./../../img/cover_2.png' mode='widthFix'></image>
+    </view>
+</view>

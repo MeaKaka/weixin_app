@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/calendar/calendar"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "calendar",
+    "navigationBarTextStyle":"black"
+  }
+}

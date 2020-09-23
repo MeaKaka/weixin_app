@@ -1,0 +1,70 @@
+/* pages/sharebill/billdetail/billdetail.wxss */
+
+.title{
+  height: 80rpx;
+  text-align: center;
+}
+.title-p{
+  color: #0bb20c;
+  height: 50%;
+  font-size: 20px;
+}
+
+.picker{
+    padding: 1px;
+    background-color: #FFFFFF;
+}
+.cells_title{
+  font-size: 20px;
+  margin-top: 40rpx;
+  color: #006666
+}
+.weui_cell{
+  display: flex;
+  flex-direction: row;
+  border-bottom-style: solid;
+  border-bottom-width: 3rpx;
+  border-bottom-color: silver;
+  margin-right: 20rpx;
+  margin-top: 55rpx;
+  margin-left: 35rpx;
+}
+.cell-hd{
+  font-size: 40rpx;
+  color: #009966;
+}
+.cell-bd{
+  font-size: 37rpx;
+  margin-left: 90rpx;
+}
+.buttonLocation{
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.buttonColor{
+  color: green;
+  font-size: 37rpx;
+  margin-bottom: 40rpx;
+}
+.line{
+  width: 100%;
+  height: 4rpx;
+  background: silver
+}
+.linedown{
+  width: 100%;
+  height: 2rpx;
+  background: silver
+}
+.button_hide{
+    color: white;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: 10;
+}

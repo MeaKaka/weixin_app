@@ -1,0 +1,89 @@
+<!--设置一个表单用于提交数据  -->
+<view class='page'>
+<view class='title'>
+  <p class="title-p">新建订单</p>
+</view>
+  <!-- 表单 -->
+  <form bindsubmit='formSubmit'>
+    <view class="weui-cells weui-cells_form">
+    <!--选择的商店名及所在平台  -->
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="section">
+            <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+              <view class="picker">
+                商店名称：
+                </view>
+              <view class='textmin'>{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}</view>
+              
+            </picker>
+          </view>
+        </view>
+      </view>
+      <!--目标优惠方式  -->
+       <view class="weui-cell tagetoff">    
+          <view class="weui-cell-hd"><label class="weui-label">目标优惠 : </label></view>
+          <view class="weui-cell-bd">
+              <view class='number_input_front'>满</view>
+              <view class='number_input'><input class="weui-input" type="number" name="target" placeholder="m"/></view>
+          </view>
+          <view class="weui-cell-ft">
+              <view class='number_input_front'>减</view>
+              <view class='number_input'><input class="weui-input" type="number" name="discount" placeholder="n"/></view>
+          </view>
+      </view>
+      <!--商品名称  -->
+      <view class="weui-cell">
+          <view class="weui-cell__hd"><label class="weui-label">运费信息 ： </label></view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" type="digit" name="extraMoney" placeholder="配送费金额"/>
+          </view>
+      </view>
+      <!--商品名称  -->
+      <view class="weui-cell">
+          <view class="weui-cell__hd"><label class="weui-label">商品名称 ： </label></view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" type="text" name="want" placeholder="购买的商品填这儿"/>
+          </view>
+      </view>    
+      <!--购买金额  -->
+      <view class="weui-cell">
+          <view class="weui-cell__hd"><label class="weui-label">购买金额 ： </label></view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" type="digit" name="pay" placeholder="金额不要超过999哦~"/>
+          </view>
+      </view>
+      <!--联系方式  -->
+      <view class="weui-cell">
+          <view class="weui-cell__hd"><label class="weui-label">联系方式 ： </label></view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" type="number" name="tel" placeholder="11位手机号码"/>
+          </view>
+      </view>
+      <!--配送地址  -->
+      <!--回头再改成picker  -->
+      <view class="weui-cell">
+          <view class="weui-cell__hd"><label class="weui-label">配送地址 ： </label></view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" type="text" name="location" placeholder="您的配送地址"/>
+          </view>
+      </view>
+      <!--备注  -->
+      <view class="weui-cell">
+          <view class="weui-cell__hd"><label class="weui-label">备注： </label></view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" type="text" name="word" placeholder="优惠券信息及一些嘱咐拼单人的话"/>
+          </view>
+      </view>
+    </view>
+
+    <view>
+      <button form-type='submit' class="buttonStyle weui-form-preview__btn">确定提交</button>
+    </view>
+  </form>
+
+</view>
+
+
+
+

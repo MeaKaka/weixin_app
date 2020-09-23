@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/new_board/new_board",
+    "pages/select/select",
+    "pages/export_img/export_img"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "随手涂鸦",
+    "navigationBarTextStyle": "black"
+  }
+}

@@ -1,0 +1,50 @@
+<!--pages/sharebill/sharebill.wxml-->
+<view class='page'>
+  <view class='newShareBill'>
+    <text class="BillListText">新建订单</text>
+    <view class='addborder'>
+      <image src='../../assets/imgs/add2.svg' class='addimg' bindtap='addbilla' ></image>
+    </view>
+  </view>
+  <view class='AtPresentShareBill'>
+    <text class="BillListText">当前订单</text>
+    <view class='weui_cell'>
+      <view class='weui_cell-hd-title'>商店名称</view>
+      <view class='weui_cell-bd-title'>外卖平台</view>
+      <view class='weui_cell-ft-title'>订单状态</view>
+    </view>
+    <view class='weui_cells'>
+      <view wx:for="{{AtPresentShareBilllist}}" wx:key="{{idid}}">
+        <!--当前订单的相关信息  -->
+        <navigator url='billdetail/billdetail?url={{item.url}}&userbillurl={{item.userbillurl}}&userstatus={{item.userstatus}}'>
+          <view class='weui_cell'>
+            <view class='weui_cell-hd'>{{item.shopName}}</view>
+            <view class='weui_cell-bd'>{{item.platName}}</view>
+            <view class='weui_cell-ft'>{{item.state}}</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class='HistoryShareBill'>
+    <text class="BillListText">历史订单</text>
+    <view class='weui_cell'>
+      <view class='weui_cell-hd-title'>商店名称</view>
+      <view class='weui_cell-bd-title'>外卖平台</view>
+      <view class='weui_cell-ft-title'>订单状态</view>
+    </view>
+    <view class='weui_cells'>
+      <view wx:for="{{HistoryShareBilllist}}" wx:key="{{idid}}">
+        <!--当前订单的相关信息  -->
+        <navigator url='billdetail/billdetail?url={{item.url}}&userbillurl={{item.userbillurl}}&userstatus={{item.userstatus}}'>
+          <view class='weui_cell'>
+            <view class='weui_cell-hd'>{{item.shopName}}</view>
+            <view class='weui_cell-bd'>{{item.platName}}</view>
+            <view class='weui_cell-ft'>{{item.state}}</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

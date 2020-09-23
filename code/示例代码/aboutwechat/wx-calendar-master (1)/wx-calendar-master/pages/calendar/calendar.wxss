@@ -1,0 +1,55 @@
+/* pages/calendar/calendar.wxss */
+
+.calendar {
+  margin: 0 25rpx;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-header image {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.picker {
+  padding: 0 20rpx;
+  text-align: center;
+  font-size: 11.25pt;
+  color: #2e4659;
+}
+
+.week {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 80rpx;
+  line-height: 80rpx;
+}
+
+.week-item {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100rpx;
+  border: 2rpx solid #eee;
+}
+
+.month {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.month-item {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  border: 2rpx solid #eee;
+  background: #fff;
+  /*border-radius: 50%;*/
+}

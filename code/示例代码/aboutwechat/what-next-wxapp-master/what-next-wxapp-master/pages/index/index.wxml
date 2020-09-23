@@ -1,0 +1,47 @@
+<view class="next-wrap">
+	<view
+		hidden="{{day.post}}"
+		class="none-tip">
+		hi, new day to go!
+	</view>
+
+	<view class="next-item">
+		<view 
+			wx:if="{{day.post}}"
+			class="next-title">今天 7AM - 11PM<text class="time">{{day.time}}</text></view>
+		<block
+			wx:for="{{day.post}}"
+			wx:for-item="post"
+			wx:key="*this">
+			<view class="next-body">
+				<icon 
+					bindtap="checkHandle"
+					id="{{index}}"
+					class="next-icon" 
+					type="{{post.complete ? 'success': 'circle'}}" 
+					size="18"/>
+				<text 
+					wx:if="{{post.state === 'normal'}}"
+					class="next-state normal">普通</text>
+				<text 
+					wx:if="{{post.state === 'important'}}"
+					class="next-state important">重要</text>
+				<text 
+					wx:if="{{post.state === 'crash'}}"
+					class="next-state crash">紧急</text>
+				<view class="next-text">{{post.content}}</view>
+			</view>
+		</block>
+		<view class="next-tip">{{day.comment}}</view>
+	</view>
+
+	<view 
+		bindtap="toAdd"
+		class="next-add">A</view>
+	<view 
+		bindtap="toWeek"
+		class="next-week">W</view>
+	<!-- <view 
+		bindtap="toMonth"
+		class="next-month">M</view> -->
+</view>

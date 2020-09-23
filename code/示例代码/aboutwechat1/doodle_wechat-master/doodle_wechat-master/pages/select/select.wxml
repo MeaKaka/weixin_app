@@ -1,0 +1,37 @@
+<!--pages/select/select.wxml-->
+<view class="container grid-bg">
+    <view class="select-wrap">
+        <!-- <view class="select-option open-board-local" data-optionindex='1' bindtap='changeOption'>
+            <text class="{{selectOption==1?'sprite-icon photo-icon active':'sprite-icon photo-icon'}}"></text>
+        </view> -->
+        <view class="select-option open-board-new" data-optionindex='2' bindtap='changeOption'>
+            <text class="{{selectOption==2?'sprite-icon new-icon active':'sprite-icon new-icon'}}"></text>
+        </view>
+    </view>
+
+    <view wx:if="{{selectOption==1}}" class="sub-select-wrap local-select-wrap">
+        <view class="sprite-icon arrow-icon"></view>
+        <view class="main-wrap">
+            <view class="local-select-option" bindtap="chooseCamera">
+                <text class="sprite-icon camera-icon"></text>
+            </view>
+            <view class="local-select-option" bindtap="chooseAlbum">
+                <text class="sprite-icon album-icon"></text>
+            </view>
+        </view>
+    </view>
+    <view wx:elif="{{selectOption==2}}" class="sub-select-wrap new-select-wrap">
+        <view class="sprite-icon arrow-icon"></view>
+        <view class="main-wrap">
+            <view class="new-select-option" data-board-type="white" bindtap="createNewBoard">
+                <text class="sprite-icon white-icon"></text>
+            </view>
+            <!-- <view class="new-select-option" data-board-type="grid" bindtap="createNewBoard">
+                <text class="sprite-icon grid-icon"></text>
+            </view> -->
+            <view class="new-select-option" data-board-type="black" bindtap="createNewBoard">
+                <text class="sprite-icon black-icon"></text>
+            </view>
+        </view>
+    </view>
+</view>

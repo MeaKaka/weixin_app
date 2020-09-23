@@ -1,0 +1,63 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="container">
+
+  <block wx:if="{{contentShow}}"></block>
+  <block wx:else>
+    <view class="zan-loadmore">
+      <view class="zan-loading"></view>
+      <view class="zan-loadmore__tips">Loading...</view>
+    </view>
+  </block>
+
+  <view class="zan-panel" wx:if="{{contentShow}}">
+
+    <view class="zan-cell">
+      <view class="zan-cell__bd">
+        <view>
+          <view class="detail-title">{{detail.title}}</view>
+          <view class="detail-content" wx:if="{{detail.text}}">
+            <!--<text selectable="true">{{detail.text}}</text>-->
+            <view class="comment-content">
+              <template is="wxParse" data="{{wxParseData:detailText.nodes}}"/>
+            </view>
+          </view>
+          <view class="detail-content" wx:if="{{detail.url}}">
+            <text selectable="true">{{detail.url}}</text>
+            <button class="zan-btn zan-btn--mini zan-btn--warn zan-btn--plain" style="float: right;" bindtap="copyurl">Copy</button>
+          </view>
+          <view class="detail-info">Posted by {{detail.by}} | {{detail.score}} Points | {{detail.kids.length ? detail.kids.length : 0}} Commits</view>
+        </view>
+      </view>
+    </view>
+
+  <view class="comment-title" wx:if="{{first_page}}">Comments</view>
+  <block wx:if="{{commentShow}}"></block>
+  <block wx:else>
+    <view class="zan-loadmore">
+      <view class="zan-loading"></view>
+      <view class="zan-loadmore__tips">Loading Comments...</view>
+    </view>
+  </block>
+
+    <view class="zan-cell" wx:for="{{commentArray}}" wx:key="id" wx:if="{{commentShow}}">
+      <view class="zan-cell__bd">
+        <view>
+          <view class="comment-author" wx:if="{{comments[index].by}}">{{comments[index].by}}:</view>
+          <view class="comment-content">
+            <template is="wxParse" data="{{wxParseData:item}}"/>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="zan-loadmore" wx:if="{{loadMore}}" bindtap="loadmore">
+      <view class="zan-loadmore__tips">Load More</view>
+    </view>
+    <view class="zan-loadmore" wx:if="{{loadMoreLoading}}">
+      <view class="zan-loading"></view>
+      <view class="zan-loadmore__tips">Loading...</view>
+    </view>
+
+  </view>
+<button class="zan-btn" style="background-color: #FF6600;color: #fff;" open-type="share">Share this story</button>
+</view>

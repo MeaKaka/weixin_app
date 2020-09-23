@@ -1,0 +1,23 @@
+/**app.wxss**/
+page {
+  height:100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.grid-bg {
+  background-image: url('https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=kaka%20%E5%9B%BE%E7%89%87&step_word=&hs=2&pn=12&spn=0&di=36855876120&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=1657953208%2C3105781984&os=3599865784%2C3947635310&simid=0%2C0&adpicid=0&lpn=0&ln=1959&fr=&fmq=1510197069819_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&oriquery=&objurl=http%3A%2F%2Fimg1.dongqiudi.com%2Ffastdfs2%2FM00%2F1B%2F84%2FChOqM1nkDaKAR858AAFz72Ie-og631.jpg&gsm=3c&rpstart=0&rpnum=0');
+  background-repeat: repeat; 
+}
+
+.sprite-icon {
+  background-image: url('https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=kaka%20%E5%9B%BE%E7%89%87&step_word=&hs=2&pn=22&spn=0&di=9320503170&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=1480237384%2C1446361507&os=3399246976%2C1306079940&simid=3178221740%2C3799941643&adpicid=0&lpn=0&ln=1959&fr=&fmq=1510197069819_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&oriquery=&objurl=http%3A%2F%2Fwscdn.miaopai.com%2Fstream%2FJM~-n5aguwfm-tgW~2H4RA___tmp_11_905_.jpg&gsm=3c&rpstart=0&rpnum=0');
+  background-repeat: no-repeat;
+  background-size: 800rpx auto;
+}

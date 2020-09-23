@@ -1,0 +1,32 @@
+<view>
+	<form catchsubmit="formSubmit">
+		<view class="text-wrap">
+			<textarea 
+				name="content"
+				placeholder="写下今天的计划吧"
+				bindblur="bindTextAreaBlur"
+				auto-focus="true"
+				auto-height />
+		</view>
+
+		<view class="state-wrap">
+			<text 
+				bindtap="selectHandle"
+				id="normal"
+				class="state-item {{isSelected === 'normal' ? 'normal':''}}">普通</text>
+			<text 
+				bindtap="selectHandle"
+				id="important"
+				class="state-item {{isSelected === 'important' ? 'important': ''}}">重要</text>
+			<text 
+				bindtap="selectHandle"
+				id="crash"
+				class="state-item {{isSelected === 'crash' ? 'crash' : ''}}">紧急</text>
+		</view>
+		
+		<view class="btn-wrap">
+			<button class="button" formType="submit">保存</button>
+		</view>
+	</form>
+	
+</view>

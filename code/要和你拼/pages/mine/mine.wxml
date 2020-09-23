@@ -1,0 +1,75 @@
+<!--pages/mine/mine.wxml-->
+<view class='page'>
+  <view class='useinfo'>
+    <view class='face'>
+      <view class="{{!hasUserInfo?'button_hide':null}}">
+        <image background-size="cover" class='userinfo-avatar' src="{{userInfo.avatarUrl}}"> </image>  
+      </view> 
+      <view class="{{hasUserInfo?'button_hide':'userinfo-avatar'}}">
+        <button class='loginbutton' open-type='getUserInfo' bindgetuserinfo='userInfoHandler'><text class='button_text'>登陆</text></button>
+      </view>
+    </view>
+    <view class='info'>
+      <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <view>
+    <view class="weui-cells">
+      <a class="weui-cell weui-cell_access" href="javascript:;">
+        <view class="weui-cell__hd">
+          <image src="../../assets/imgs/message.svg" alt="icon" style="width:50rpx;height:50rpx;margin-right:5px;display:block"/>
+        </view>
+        <view class="weui-cell__bd">
+        <!--todo  用于去接收用户的一些基本的反馈，包括商店不够之类的  -->
+          <p>信息反馈</p>
+        </view>
+        <view class="weui-cell__ft">
+        </view>
+      </a>
+      <a class="weui-cell weui-cell_access" href="pages/index/index">
+        <view class="weui-cell__hd">
+           <image src="../../assets/imgs/location.svg" alt="icon" style="width:50rpx;height:50rpx;margin-right:5px;display:block"/>
+        </view>
+        <view class="weui-cell__bd">
+          <p>地址管理</p>
+        </view>
+        <view class="weui-cell__ft">
+        <!--箭头  -->
+        </view>
+      </a>
+      <a class="weui-cell weui-cell_access" href="javascript:;">
+        <view class="weui-cell__hd">
+          <image src="../../assets/imgs/phone.svg" alt="icon" style="width:50rpx;height:50rpx;margin-right:5px;display:block"/>
+        </view>
+        <view class="weui-cell__bd">
+          <p>联系方式管理</p>
+        </view>
+        <view class="weui-cell__ft">
+        </view>
+      </a>
+      <!-- <a class="weui-cell weui-cell_access" href="javascript:;">
+        <view class="weui-cell__hd">
+          <image src="../../assets/imgs/setting.svg" alt="icon" style="width:50rpx;height:50rpx;margin-right:5px;display:block"/>
+        </view>
+        <view class="weui-cell__bd">
+          <p>我的收款二维码</p>
+        </view>
+        <view class="weui-cell__ft">
+        </view>
+      </a> -->
+      <a class="weui-cell weui-cell_access" href="javascript:;">
+        <view class="weui-cell__hd">
+          <image src="../../assets/imgs/setting.svg" alt="icon" style="width:50rpx;height:50rpx;margin-right:5px;display:block"/>
+        </view>
+        <view class="weui-cell__bd">
+          <p>通用设置</p>
+        </view>
+        <view class="weui-cell__ft">
+        </view>
+      </a>
+    </view>
+  </view>
+  <!--加一条灰色的线  -->
+  <view class='line'></view>
+</view>
